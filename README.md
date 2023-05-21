@@ -23,7 +23,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/anerpeco/news-homepage)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://news-homepage-anerpeco.vercel.app/)
 
 ## My process
 
