@@ -1,0 +1,80 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+/* ------------------------------ */
+/* ----------TYPOGRAPHY---------- */
+/* ------------------------------ */
+.nav{
+    li{
+        a{
+            @include m.font(v.$fs-nav-mob, v.$fw-nav, 1.5rem, v.$neutral_400);
+            text-decoration: none;
+
+            @include m.media(xxl){
+                font-size: v.$fs-nav-des;
+                line-height: 1.625rem;
+                color: v.$neutral_300;
+            }
+        }
+    }
+}
+
+.hero{
+    h1{
+        @include m.font(v.$fs-heading-1-mob, v.$fw-heading-1, 2.5rem, v.$neutral_400);
+
+        @include m.media(xxl){
+            font-size: v.$fs-heading-1-des;
+            line-height: 3.5rem;
+                }
+    }
+
+    p{
+        @include m.font(v.$fs-body, v.$fw-body, 1.625rem, v.$neutral_300);
+    }
+
+    button{
+        @include m.font(v.$fs-btn, v.$fw-btn, 1.5rem, v.$neutral_100);
+        letter-spacing: .2734rem;
+        text-transform: uppercase;
+    }
+}
+
+.news{
+    h2{
+        @include m.font(v.$fs-heading-2-news-mob, v.$fw-heading-2-news, 2rem, v.$primary);
+
+        @include m.media(xxl){
+            font-size: v.$fs-heading-2-news-des;
+            line-height: 2.5rem;
+        }
+    }
+
+    h3{
+        a{
+            @include m.font(v.$fs-heading-3, v.$fw-heading-3, 1.5rem, v.$neutral_100);
+            text-decoration: none
+        }
+    }
+
+    p{
+        @include m.font(v.$fs-body, v.$fw-body, 1.625rem, v.$neutral_200);
+    }
+}
+
+.trending{
+    .number{
+        @include m.font(v.$fs-num, v.$fw-num, 2rem, v.$neutral_200);
+    }
+
+    h2{
+        a{
+            @include m.font(v.$fs-heading-2-trending, v.$fw-heading-2-trending, 1.5rem, v.$neutral_400);
+            text-decoration: none
+        }
+    }
+
+    p{
+        @include m.font(v.$fs-body, v.$fw-body, 1.625rem, v.$neutral_300);
+    }
+}

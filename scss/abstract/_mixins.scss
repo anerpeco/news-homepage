@@ -1,0 +1,34 @@
+@use "breakpoints" as b;
+
+// MEDIA QUERY
+@mixin media($key) {
+
+  $size: map-get(b.$breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// FONT
+@mixin font($size: 1rem, $weight: 400, $height: 1.2, $color: #000){
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
+// LINEAR GRADIENT
+@mixin gradient($direction, $list){
+    background: linear-gradient($direction, $list);
+}
+
+// GRID LAYOUT
+@mixin grid($columns: 1fr, $rows: auto, $gap: null, $row-gap: null, $column-gap: null){
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}

@@ -1,0 +1,14 @@
+@use "../abstract/mixins" as m;
+
+/* ------------------------------ */
+/* ------------LAYOUT------------ */
+/* ------------------------------ */
+/* grid */
+.hero{
+    @include m.media(xxl){
+        @include m.grid(repeat(3, 1fr), 3fr 2fr, 1.75rem 1.875rem);
+        grid-template-areas: 
+        "heroImage heroImage news"
+        "heroHeader heroContent news";
+    }
+}

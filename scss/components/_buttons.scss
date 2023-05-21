@@ -1,0 +1,65 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+/* ------------------------------ */
+/* ----------COMPONENTS---------- */
+/* ------------------------------ */
+/* navbar */
+.nav{
+    position: absolute;
+    background-color: v.$neutral_100;
+    height: 100vh;
+    width: 16rem;
+    top: 0;
+    right: 0;
+    padding-top: 9rem;
+    padding-left: 1.5rem;
+    z-index: 10;
+
+    @include m.media(xxl){
+        display: block !important;
+        top: 6.0625rem;
+        right: 10.3125rem;
+        height: 1.625rem;
+        width: 26.9375rem;
+        background-color: transparent;
+        padding: 0;
+        justify-items: end;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @include m.media(xxl){
+            display: flex;
+            justify-content: space-between;
+        }
+
+        li{
+            margin-bottom: 1.5rem;
+
+            a:hover{
+                color: v.$secondary;
+            }
+        }
+    }
+}
+
+.disabled{
+    display: none;
+}
+
+/* button */
+.btn{
+    width: 11.5625rem;
+    height: 3rem;
+    background-color: v.$secondary;
+    border: none;
+
+    &:hover{
+        background-color: v.$neutral_400;
+        cursor: pointer;
+    }
+}

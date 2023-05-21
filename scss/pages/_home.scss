@@ -1,0 +1,138 @@
+@use "../abstract/mixins" as m;
+@use "../abstract/variables" as v;
+
+/* ------------------------------ */
+/* ----------HOME PAGE---------- */
+/* ----------------------------- */
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    @include m.media(xxl){
+        margin-bottom: 3.4375rem;
+    }
+
+    .logo{
+        width: 2.8125rem;
+
+        @include m.media(xxl){
+            width: 4rem;
+        }
+    }
+
+    .hamburger{
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .menu_icon{
+        width: 2.5rem;
+
+        @include m.media(xxl){
+            display: none;
+        }
+    }
+}
+
+/* hero */
+.hero{
+    .project_img{
+        grid-area: heroImage;
+        margin-bottom: 1.5rem;
+
+        @include m.media(xxl){
+            margin: 0;
+        }
+    }
+
+    .hero__header{
+        grid-area: heroHeader;
+        margin-bottom: 1rem;
+
+        @include m.media(xxl){
+            margin: 0;
+        }
+    }
+
+    .hero__content{
+        grid-area: heroContent;
+
+        p{
+            margin-bottom: 1.5rem;
+
+            @include m.media(xxl){
+                margin-bottom: 1.8125rem;
+            }
+        }
+    }
+}
+
+/* news */
+.news{
+    grid-area: news;
+    background-color: v.$neutral_400;
+    padding: 1.5rem 1.25rem;
+    margin-top: 4rem;
+
+    @include m.media(xxl){
+        padding: 2rem 1.5rem;
+        margin: 0;
+    }
+
+    h2{
+        margin-bottom: 2.125rem;
+    }
+
+    h3{
+        margin-bottom: .5rem;
+
+        a:hover{
+            color: v.$primary;
+        }
+    }
+
+    .line{
+        width: 100%;
+        height: 1px;
+        background-color: v.$neutral_300;
+        margin-top: 1.8125rem;
+        margin-bottom: 1.9375rem;
+    }
+} 
+
+/* trending */
+.trending{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 4rem;
+
+    @include m.media(xxl){
+        flex-direction: row;
+        column-gap: 1.875rem;
+        margin-top: 4.4375rem;
+    }
+
+    &__item{
+        display: flex;
+        column-gap: 1.5rem;
+        flex: 1 1 0;
+
+        img{
+            width: 6.25rem;
+        }
+
+        h2{
+            margin-top: .75rem;
+            margin-bottom: .5625rem;
+
+            a:hover{
+                color: v.$primary;
+            }
+        }
+    }
+}
